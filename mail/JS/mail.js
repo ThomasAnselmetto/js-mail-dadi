@@ -26,14 +26,15 @@ for (let i = 0; i < mailList.length; i++ ){
     let currentEl = mailList[i]
     
        
-        if (emailInput == currentEl) {
-            correctMail = true;
-            outputMessage.innerHTML = "Benvenuto," + currentEl;
-        }
-        else{
-            outputMessage.innerHTML = "Ritenta";
-        }
+    if (emailInput == currentEl) {
+        correctMail = true;
+    }
 }
+    if (correctMail = true){
+        outputMessage = "Benvenuto, + emailInput"
+    } else {
+        outputMessage = "Ritenta"
+    }
 
     
 
