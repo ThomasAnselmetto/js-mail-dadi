@@ -19,19 +19,20 @@ const emailInput = prompt("inserisci la tua mail");
 
 let outputMessage = document.getElementById("screen-message")
 
-let currentEl;
+
+let correctMail = false;
 
 for (let i = 0; i < mailList.length; i++ ){
-    currentEl = mailList[i]
+    let currentEl = mailList[i]
     
-        // if (emailInput != currentEl)
-        // {
-        //    outputMessage.innerHTML = "Non sei stato riconosciuto dal sistema,ti preghiamo di riprovare";}
-           
+       
         if (emailInput == currentEl) {
+            correctMail = true;
             outputMessage.innerHTML = "Benvenuto," + currentEl;
         }
-        
+        else{
+            outputMessage.innerHTML = "Ritenta";
+        }
 }
 
     
