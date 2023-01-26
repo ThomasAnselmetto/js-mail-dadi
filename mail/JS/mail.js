@@ -23,18 +23,19 @@ let outputMessage = document.getElementById("screen-message")
 let correctMail = false;
 
 for (let i = 0; i < mailList.length; i++ ){
-    let currentEl = mailList[i]
-    
+    let currentEl = mailList[i];
+    console.log(currentEl);
        
     if (emailInput == currentEl) {
         correctMail = true;
+        console.log(correctMail);
     }
 }
-    if (correctMail = true){
-        outputMessage = "Benvenuto, + emailInput"
-    } else {
-        outputMessage = "Ritenta"
-    }
+     if (correctMail == true){
+         outputMessage.innerHTML = ("Benvenuto," + emailInput);
+     } else {
+         outputMessage.innerHTML = ("Ritenta");
+     }
 
     
 
